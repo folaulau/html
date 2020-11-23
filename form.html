@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>HTML Tutorial</title>
+        <!-- jQuery -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <!-- Bootstrap -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    </head>
+<body class="container">
+
+<h1 class="text-center">HTML Form Tutorial</h2>
+<div class="row">
+    <div class="col-3">
+        <a href="index.html">home</a>
+    </div>
+    <div class="col-9">
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <h3>Form</h3>
+    </div>
+    <div class="col-9">
+        <!-- novalidate specifies that the form-data (input) should not be validated when submitted. -->
+        <form method="POST" action="/signup"  autocomplete="on" novalidate> 
+            <!-- The <fieldset> element is used to group related data in a form -->
+            <fieldset>
+                <!-- The <legend> element defines a caption for the <fieldset> element. -->
+                <legend>Sign Up</legend>
+                <div class="form-group">
+                <label for="exampleInputName">Name</label>
+                <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                <small id="nameHelp" class="form-text text-muted">Name</small>
+                </div>
+                <div class="form-group">
+                    <label for="language">Language</label>
+                    <select class="form-control" id="language">
+                    <option value="eng">English</option>
+                    <option value="ton">Tongan</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="startDate">Start Date</label>
+                    <select multiple class="form-control" id="startDate">
+                    <option>2020-11-01</option>
+                    <option>2020-12-01</option>
+                    <option>2021-01-01</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="licenseFile">License File</label>
+                    <input type="file" class="form-control-file" id="licenseFile">
+                </div>
+                <div class="form-group">
+                    <label for="gpa">GPA</label>
+                    <input type="range" min="0" max="4" value="2" class="form-control-range" id="gpa">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                    Red
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                    Blue
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                    MALE
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                    FEMALE
+                    </label>
+                </div>
+                <legend>Pofile</legend>
+                <div class="form-group">
+                    <label for="aboutMe">About Me</label>
+                    <textarea class="form-control" id="aboutMe" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="searcItem">Search Browsers</label>
+                    <input list="browsers" type="text" class="form-control" name="browser">
+                    <datalist id="browsers">
+                        <option value="Internet Explorer">
+                        <option value="Firefox">
+                        <option value="Chrome">
+                        <option value="Opera">
+                        <option value="Safari">
+                    </datalist>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+</body>
+</html> 
