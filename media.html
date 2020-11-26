@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>HTML Tutorial</title>
+        <!-- jQuery -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <!-- Bootstrap -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+        <script>
+            var lionKing = document.getElementById("lionKingVideo"); 
+
+            function playVideo() { 
+                console.log("paused: "+lionKing.paused);
+                if (lionKing.paused) 
+                    lionKing.play(); 
+                else 
+                    lionKing.pause(); 
+            }
+
+            function pauseVideo() { 
+                if (lionKing.paused) 
+                    lionKing.play(); 
+                else 
+                    lionKing.pause(); 
+            }
+
+            function stopVideo() { 
+                lionKing.load();
+            }
+        </script>
+    </head>
+<body class="container">
+
+<h1 class="text-center">HTML Media Tutorial</h2>
+<div class="row">
+    <div class="col-3">
+        <a href="index.html">home</a>
+    </div>
+    <div class="col-9">
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <h3>Media Audio</h3>
+    </div>
+    <div class="col-9">
+        <!-- controls attribute specifies that audio controls should be displayed (such as a play/pause button etc) -->
+        <!-- loop attribute specifies that the audio will start over again, every time it is finished. -->
+        <!-- autoplay attribute specifies that the audio will start playing as soon as it is ready -->
+        <audio controls loop>
+            <source src="assets/amanaki.ogg" type="audio/ogg">
+            <source src="assets/amanaki.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-3">
+        <h3>Media Video</h3>
+    </div>
+    <div class="col-9">
+        <div class="btn-group" role="group" aria-label="">
+            <button onclick="playVideo()" type="button" class="btn btn-secondary">Play</button>
+            <button onclick="pauseVideo()" type="button" class="btn btn-secondary">Pause</button>
+            <button onclick="stopVideo()" type="button" class="btn btn-secondary">Stop</button>
+        </div>
+        <video id="lionKingVideo" width="650" height="500" controls>
+            <source src="assets/lion_king.mp4" type="video/mp4">
+            <!-- <source src="assets/lion_king.ogg" type="video/ogg"> -->
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+
+</body>
+</html> 
